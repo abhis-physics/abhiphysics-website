@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Fledged Video Course - 2026 | UPSC Physics Optional</title>
+    <title>UPSC Physics Optional 2026 | Premium Video Course</title>
     <style>
         * {
             margin: 0;
@@ -12,590 +12,621 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
             line-height: 1.6;
+            background: #0a0a0a;
+            color: #ffffff;
             overflow-x: hidden;
-            background: #000;
-            color: #f5f5f7;
         }
 
+        /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #000 0%, #1d1d1f 100%);
             min-height: 100vh;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
             position: relative;
+            padding: 1rem;
         }
 
         .hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 30% 40%, rgba(120, 119, 198, 0.3), transparent 70%),
-                        radial-gradient(circle at 80% 10%, rgba(255, 95, 109, 0.15), transparent 50%),
-                        radial-gradient(circle at 40% 80%, rgba(255, 55, 95, 0.1), transparent 50%);
+            inset: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.15) 0%, transparent 60%),
+                radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.1) 0%, transparent 60%);
             pointer-events: none;
         }
 
         .hero-content {
+            max-width: 800px;
+            text-align: center;
             position: relative;
             z-index: 2;
-            max-width: 980px;
-            padding: 2rem;
-            animation: fadeInUp 1.2s ease-out;
+            animation: slideUp 1s ease-out;
         }
 
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .hero h1 {
-            font-size: clamp(48px, 8vw, 96px);
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
             font-weight: 600;
-            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 700;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, #f5f5f7 0%, #86868b 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             letter-spacing: -0.02em;
+            line-height: 1.1;
         }
 
         .hero-subtitle {
-            font-size: clamp(21px, 3vw, 28px);
+            font-size: clamp(1.1rem, 3vw, 1.3rem);
+            color: #a1a1aa;
+            margin-bottom: 2rem;
             font-weight: 400;
-            color: #a1a1a6;
-            margin-bottom: 3rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
-        .price-hero {
-            margin: 3rem 0;
-            padding: 0;
+        /* Pricing Hero */
+        .pricing-hero {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
 
-        .price-display {
+        .price-row {
             display: flex;
-            align-items: baseline;
+            align-items: center;
             justify-content: center;
             gap: 1rem;
-            margin: 2rem 0;
+            margin-bottom: 1rem;
             flex-wrap: wrap;
         }
 
-        .price-from {
-            font-size: 17px;
-            color: #86868b;
-        }
-
         .price-original {
-            font-size: 28px;
-            color: #86868b;
+            font-size: 1.5rem;
+            color: #71717a;
             text-decoration: line-through;
-            font-weight: 400;
         }
 
         .price-current {
-            font-size: 56px;
-            font-weight: 600;
-            color: #0b289c;
-            letter-spacing: -0.02em;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #3b82f6;
         }
 
-        .launch-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #ff375f 0%, #ff6b95 100%);
+        .discount-badge {
+            background: linear-gradient(135deg, #ef4444, #f97316);
             color: white;
-            padding: 8px 16px;
+            padding: 0.25rem 0.75rem;
             border-radius: 20px;
-            font-size: 13px;
+            font-size: 0.8rem;
             font-weight: 600;
-            margin: 1rem 0;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
         .final-price {
-            font-size: 48px;
-            font-weight: 600;
-            color: #30d158;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #10b981;
             margin: 1rem 0;
-            letter-spacing: -0.02em;
         }
 
-        .coupon {
-            background: #1d1d1f;
-            border: 1px solid #424245;
+        .coupon-box {
+            background: rgba(16, 185, 129, 0.1);
+            border: 2px dashed #10b981;
             border-radius: 12px;
-            padding: 16px 24px;
-            margin: 2rem 0;
-            display: inline-block;
-        }
-
-        .coupon-label {
-            font-size: 13px;
-            color: #86868b;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 4px;
+            padding: 1rem;
+            margin: 1rem 0;
+            text-align: center;
         }
 
         .coupon-code {
-            font-size: 24px;
-            font-weight: 600;
-            color: #f5f5f7;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #10b981;
             font-family: 'SF Mono', Monaco, monospace;
             letter-spacing: 2px;
         }
 
         .cta-button {
-            background: #0071e3;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
             color: white;
-            padding: 16px 32px;
+            padding: 1rem 2rem;
             border: none;
-            border-radius: 980px;
-            font-size: 17px;
-            font-weight: 400;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
             text-decoration: none;
             display: inline-block;
-            margin: 2rem 1rem 1rem 1rem;
+            margin: 1rem;
             transition: all 0.3s ease;
-            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
         }
 
         .cta-button:hover {
-            background: #0077ed;
-            transform: translateY(-1px);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
         }
 
-        .cta-button.secondary {
-            background: transparent;
-            color: #0071e3;
-            border: 2px solid #0071e3;
+        .start-date {
+            font-size: 0.9rem;
+            color: #a1a1aa;
+            margin-top: 1rem;
         }
 
-        .cta-button.secondary:hover {
-            background: #0071e3;
-            color: white;
-        }
-
-        .start-info {
-            margin-top: 2rem;
-            font-size: 17px;
-            color: #86868b;
-        }
-
-        .section {
-            padding: 100px 2rem;
-            max-width: 980px;
-            margin: 0 auto;
-        }
-
-        .section-large {
-            padding: 120px 2rem;
+        /* Features Section */
+        .features {
+            padding: 4rem 1rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .section-title {
-            font-size: clamp(32px, 5vw, 48px);
-            font-weight: 600;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-            color: #f5f5f7;
+        .section-header {
             text-align: center;
-            letter-spacing: -0.02em;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffffff;
         }
 
         .section-subtitle {
-            font-size: clamp(19px, 2.5vw, 24px);
-            color: #86868b;
-            text-align: center;
-            margin-bottom: 4rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .features-container {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-        }
-
-        .feature-row {
-            display: flex;
-            align-items: center;
-            min-height: 60vh;
-            gap: 8rem;
-            margin-bottom: 8rem;
-        }
-
-        .feature-row:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        .feature-content {
-            flex: 1;
-            padding: 2rem 0;
-        }
-
-        .feature-visual {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 400px;
-            background: linear-gradient(135deg, #1d1d1f 0%, #2d2d30 100%);
-            border-radius: 24px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-visual::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(0, 113, 227, 0.2) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .feature-icon {
-            font-size: 80px;
-            color: #0071e3;
-            z-index: 2;
-            position: relative;
-        }
-
-        .feature-title {
-            font-size: clamp(28px, 4vw, 40px);
-            font-weight: 600;
-            color: #f5f5f7;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-            letter-spacing: -0.02em;
-        }
-
-        .feature-description {
-            font-size: 19px;
-            color: #86868b;
-            line-height: 1.5;
-            margin-bottom: 2rem;
-        }
-
-        .feature-highlights {
-            list-style: none;
-            padding: 0;
-        }
-
-        .feature-highlights li {
-            font-size: 17px;
-            color: #a1a1a6;
-            margin-bottom: 8px;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .feature-highlights li::before {
-            content: '•';
-            color: #30d158;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-
-        .pricing-section {
-            background: #f5f5f7;
-            color: #1d1d1f;
-            padding: 120px 2rem;
-            text-align: center;
-        }
-
-        .pricing-container {
+            font-size: 1.1rem;
+            color: #a1a1aa;
             max-width: 600px;
             margin: 0 auto;
         }
 
-        .pricing-section .section-title {
-            color: #1d1d1f;
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
         }
 
-        .pricing-section .section-subtitle {
-            color: #86868b;
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #10b981);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .feature-description {
+            color: #a1a1aa;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            color: #d1d5db;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+            padding: 4rem 1rem;
+            text-align: center;
         }
 
         .pricing-card {
-            background: white;
+            max-width: 500px;
+            margin: 2rem auto;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 24px;
-            padding: 4rem 3rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            margin: 3rem 0;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
         }
 
-        .pricing-card .price-display {
-            color: #1d1d1f;
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #10b981, #ef4444);
         }
 
-        .pricing-card .final-price {
-            color: #30d158;
-        }
-
-        .urgency-section {
-            background: linear-gradient(135deg, #1d1d1f 0%, #000 100%);
-            padding: 120px 2rem;
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+            padding: 3rem 1rem;
             text-align: center;
-        }
-
-        .urgency-content {
-            max-width: 800px;
-            margin: 0 auto;
         }
 
         .urgency-badge {
-            background: linear-gradient(135deg, #ff375f 0%, #ff6b95 100%);
+            background: linear-gradient(135deg, #ef4444, #dc2626);
             color: white;
-            padding: 12px 24px;
-            border-radius: 24px;
-            font-size: 15px;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
             font-weight: 600;
             display: inline-block;
-            margin-bottom: 2rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+            animation: pulse 2s infinite;
         }
 
-        .brand-footer {
-            text-align: center;
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Footer */
+        .footer {
+            background: #111827;
             padding: 2rem;
-            font-size: 17px;
-            color: #86868b;
-            border-top: 1px solid #424245;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
+        .footer-brand {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .footer-tagline {
+            color: #a1a1aa;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Mobile Optimizations */
         @media (max-width: 768px) {
-            .feature-row {
-                flex-direction: column !important;
-                gap: 3rem;
-                min-height: auto;
+            .hero {
+                padding: 2rem 1rem;
+                min-height: 100vh;
             }
 
-            .feature-visual {
-                min-height: 300px;
+            .pricing-hero {
+                padding: 1.5rem;
+                margin: 1.5rem 0;
             }
 
-            .price-display {
+            .price-row {
                 flex-direction: column;
                 gap: 0.5rem;
             }
 
-            .section {
-                padding: 60px 1rem;
+            .features {
+                padding: 3rem 1rem;
             }
 
-            .section-large {
-                padding: 80px 1rem;
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
+
+            .feature-card {
+                padding: 1.5rem;
+            }
+
+            .pricing {
+                padding: 3rem 1rem;
+            }
+
+            .pricing-card {
+                padding: 2rem;
+                margin: 1.5rem auto;
+            }
+
+            .cta-section {
+                padding: 2.5rem 1rem;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
+                padding: 1.2rem 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .pricing-hero {
+                padding: 1rem;
+            }
+
+            .feature-card {
+                padding: 1.2rem;
+            }
+
+            .pricing-card {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Full Fledged Video Course</h1>
-            <p class="hero-subtitle">Master UPSC Physics Optional with India's most comprehensive and structured program, crafted for serious aspirants.</p>
+            <div class="hero-badge">🎯 UPSC Physics Optional 2026</div>
+            <h1>Master Physics Optional</h1>
+            <p class="hero-subtitle">India's most comprehensive video course designed for serious UPSC aspirants</p>
             
-            <div class="price-hero">
-                <div class="price-display">
-                    <span class="price-from">From</span>
+            <div class="pricing-hero">
+                <div class="price-row">
                     <span class="price-original">₹40,000</span>
                     <span class="price-current">₹24,000</span>
+                    <span class="discount-badge">40% OFF</span>
                 </div>
                 
-                <div class="launch-badge">Special Launch Offer - First 50 Only</div>
+                <div class="final-price">Additional ₹3500 off for first 50 Subscribers, hence only ₹20,500</div>
                 
-                <div class="final-price">₹20,500</div>
-                
-                <div class="coupon">
-                    <div class="coupon-label">Use Code</div>
+                <div class="coupon-box">
+                    <p style="font-size: 0.8rem; color: #a1a1aa; margin-bottom: 0.5rem;">Use Coupon Code</p>
                     <div class="coupon-code">CRACKIT</div>
                 </div>
                 
                 <a href="https://t.ly/ffc2026-upsc-physics-optional" class="cta-button">
-                    Enroll Now
+                    🚀 Enroll Now
                 </a>
                 
-                <div class="start-info">
-                    Classes begin Monday, 16 June 2025
-                </div>
+                <p class="start-date">📅 Classes begin Monday, 16 June 2025</p>
             </div>
         </div>
     </section>
 
-    <section class="section-large">
-        <h2 class="section-title">Everything you need to excel</h2>
-        <p class="section-subtitle">A complete, structured program designed after months of preparation and feedback from top performers</p>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="section-header">
+            <h2 class="section-title">Everything You Need to Excel</h2>
+            <p class="section-subtitle">Complete preparation package crafted by experts with proven track record</p>
+        </div>
         
-        <div class="features-container">
-            <div class="feature-row">
-                <div class="feature-content">
-                    <h3 class="feature-title">Comprehensive Video Lessons</h3>
-                    <p class="feature-description">Complete coverage of both Paper I and II with expert instruction designed specifically for UPSC aspirants.</p>
-                    <ul class="feature-highlights">
-                        <li>Structured curriculum aligned with UPSC syllabus</li>
-                        <li>High-quality video production</li>
-                        <li>Expert faculty with proven track record</li>
-                    </ul>
-                </div>
-                <div class="feature-visual">
-                    <div class="feature-icon">📹</div>
-                </div>
+        <div class="features-grid">
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🎥</div>
+                <h3 class="feature-title">HD Video Lessons</h3>
+                <p class="feature-description">Complete coverage of Paper I & II with expert instruction and clear explanations</p>
+                <ul class="feature-list">
+                    <li>UPSC syllabus aligned content</li>
+                    <li>High-quality video production</li>
+                    <li>Expert faculty guidance</li>
+                </ul>
             </div>
 
-            <div class="feature-row">
-                <div class="feature-content">
-                    <h3 class="feature-title">Exam-Ready Notes</h3>
-                    <p class="feature-description">Exhaustive, meticulously crafted notes aligned with the latest UPSC syllabus for optimal preparation.</p>
-                    <ul class="feature-highlights">
-                        <li>Comprehensive coverage of all topics</li>
-                        <li>Easy-to-understand format</li>
-                        <li>Regular updates based on syllabus changes</li>
-                    </ul>
-                </div>
-                <div class="feature-visual">
-                    <div class="feature-icon">📚</div>
-                </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">📚</div>
+                <h3 class="feature-title">Comprehensive Notes</h3>
+                <p class="feature-description">Meticulously crafted study material for optimal exam preparation</p>
+                <ul class="feature-list">
+                    <li>Complete topic coverage</li>
+                    <li>Easy-to-understand format</li>
+                    <li>Regular syllabus updates</li>
+                </ul>
             </div>
 
-            <div class="feature-row">
-                <div class="feature-content">
-                    <h3 class="feature-title">Previous Year Solutions</h3>
-                    <p class="feature-description">Detailed video and PDF solutions to previous year questions with comprehensive explanations.</p>
-                    <ul class="feature-highlights">
-                        <li>Step-by-step solution methodology</li>
-                        <li>Video explanations for complex problems</li>
-                        <li>Pattern analysis and insights</li>
-                    </ul>
-                </div>
-                <div class="feature-visual">
-                    <div class="feature-icon">📊</div>
-                </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">📊</div>
+                <h3 class="feature-title">PYQ Solutions</h3>
+                <p class="feature-description">Detailed solutions with step-by-step explanations and pattern analysis</p>
+                <ul class="feature-list">
+                    <li>Video solution methodology</li>
+                    <li>Complex problem explanations</li>
+                    <li>Exam pattern insights</li>
+                </ul>
             </div>
 
-            <div class="feature-row">
-                <div class="feature-content">
-                    <h3 class="feature-title">Practice Sets & Mentorship</h3>
-                    <p class="feature-description">Specially designed practice sets modeled after PYQs with personalized guidance throughout your journey.</p>
-                    <ul class="feature-highlights">
-                        <li>Regular practice tests and assessments</li>
-                        <li>One-on-one mentorship sessions</li>
-                        <li>Digital support and doubt resolution</li>
-                    </ul>
-                </div>
-                <div class="feature-visual">
-                    <div class="feature-icon">🎯</div>
-                </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🎯</div>
+                <h3 class="feature-title">Practice & Mentorship</h3>
+                <p class="feature-description">Structured practice tests with personalized guidance and support</p>
+                <ul class="feature-list">
+                    <li>Regular assessments</li>
+                    <li>One-on-one mentorship</li>
+                    <li>24/7 doubt resolution</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section class="pricing-section">
-        <div class="pricing-container">
-            <h2 class="section-title">Simple, transparent pricing</h2>
-            <p class="section-subtitle">Get everything you need to succeed in UPSC Physics Optional</p>
-            
-            <div class="pricing-card">
-                <div class="price-display">
-                    <span class="price-from">Complete Course</span>
-                </div>
-                
-                <div class="price-display">
-                    <span class="price-original">₹40,000</span>
-                    <span class="price-current">₹24,000</span>
-                </div>
-                
-                <div class="launch-badge">Launch Special: Extra ₹3,500 OFF</div>
-                
-                <div class="final-price">₹20,500</div>
-                
-                <div class="coupon">
-                    <div class="coupon-label">Coupon Code</div>
-                    <div class="coupon-code">CRACKIT</div>
-                </div>
-                
-                <p style="color: #86868b; margin: 2rem 0;">Flexible payment options: One-time or 3 easy EMIs</p>
-                
-                <a href="https://t.ly/ffc2026-upsc-physics-optional" class="cta-button">
-                    Get Started
-                </a>
-            </div>
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="section-header">
+            <h2 class="section-title">Simple, Transparent Pricing</h2>
+            <p class="section-subtitle">Complete course access with lifetime updates</p>
         </div>
-    </section>
-
-    <section class="urgency-section">
-        <div class="urgency-content">
-            <div class="urgency-badge">Classes Start Tomorrow</div>
-            <h2 class="section-title">Don't miss out</h2>
-            <p class="section-subtitle">Join India's most comprehensive UPSC Physics Optional course. Limited seats available for the launch batch.</p>
+        
+        <div class="pricing-card">
+            <div class="price-row">
+                <span class="price-original">₹40,000</span>
+                <span class="price-current">₹24,000</span>
+            </div>
             
-            <a href="https://t.ly/ffc2026-upsc-physics-optional" class="cta-button" style="font-size: 19px; padding: 18px 36px;">
-                Secure Your Spot
+            <div class="discount-badge" style="margin: 1rem 0;">Launch Special: Extra ₹3,500 OFF</div>
+            
+            <div class="final-price">₹20,500</div>
+            
+            <div class="coupon-box">
+                <div class="coupon-code">CRACKIT</div>
+            </div>
+            
+            <p style="color: #a1a1aa; margin: 1rem 0;">💳 Flexible payment: One-time or 3 EMIs</p>
+            
+            <a href="https://t.ly/ffc2026-upsc-physics-optional" class="cta-button">
+                Get Started Today
             </a>
         </div>
     </section>
 
-    <footer class="brand-footer">
-        <p><strong>PhysicsMadeSuperEasy</strong> – Your Success, Our Mission</p>
+    <!-- Final CTA -->
+    <section class="cta-section">
+        <div class="urgency-badge">⏰ Limited Time Offer</div>
+        <h2 class="section-title">Don't Miss Out</h2>
+        <p class="section-subtitle">Join India's most comprehensive UPSC Physics Optional course</p>
+        <a href="https://t.ly/ffc2026-upsc-physics-optional" class="cta-button" style="font-size: 1.2rem; margin-top: 1.5rem;">
+            🔥 Secure Your Spot Now
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-brand">PhysicsMadeSuperEasy</div>
+        <p class="footer-tagline">Your Success, Our Mission</p>
     </footer>
 
     <script>
-        // Smooth scroll behavior and subtle animations
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add hover animations to feature visuals
-            const featureVisuals = document.querySelectorAll('.feature-visual');
-            featureVisuals.forEach(visual => {
-                visual.addEventListener('mouseenter', function() {
-                    this.style.transform = 'scale(1.02)';
-                    this.style.transition = 'transform 0.3s ease';
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => observer.observe(el));
+
+            // Add hover effects to feature cards
+            const featureCards = document.querySelectorAll('.feature-card');
+            featureCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-8px) scale(1.02)';
                 });
-                visual.addEventListener('mouseleave', function() {
-                    this.style.transform = 'scale(1)';
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0) scale(1)';
                 });
             });
 
-            // Subtle scroll animations
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
+            // Smooth scroll for CTA buttons
+            const ctaButtons = document.querySelectorAll('.cta-button');
+            ctaButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    // Add click animation
+                    button.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        button.style.transform = 'scale(1)';
+                    }, 150);
                 });
-            }, observerOptions);
-
-            const featureRows = document.querySelectorAll('.feature-row');
-            featureRows.forEach(row => {
-                row.style.opacity = '0';
-                row.style.transform = 'translateY(30px)';
-                row.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-                observer.observe(row);
             });
+        });
+
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.2}px)`;
+            }
         });
     </script>
 </body>
