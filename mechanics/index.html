@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Mechanics and Relativity Topics</title>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <meta name="description" content="Topics in Mechanics and Special Relativity including particles, rigid bodies, continuous media, and relativity concepts. Ideal for UPSC Physics preparation.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 2rem;
-      line-height: 1.6;
       background-color: #f9f9f9;
       color: #333;
+      line-height: 1.6;
     }
     h2 {
       color: #2c3e50;
@@ -21,38 +22,39 @@
       margin-top: 0.5rem;
       padding-left: 1.5rem;
     }
+    li {
+      margin-bottom: 0.5rem;
+    }
   </style>
 </head>
 <body>
-  <div id="content"></div>
 
-  <script>
-    const markdown = `
-## (a) Mechanics of Particles
+  <h2>(a) Mechanics of Particles</h2>
+  <ul>
+    <li>✓ Laws of motion; conservation of energy and momentum, applications to rotating frames, centripetal and Coriolis accelerations;</li>
+    <li>✓ Motion under a central force; Conservation of angular momentum, Kepler's laws; Fields and potentials; Gravitational field and potential due to spherical bodies, Gauss and Poisson equations, gravitational self-energy; Two-body problem; Reduced mass; Rutherford scattering;</li>
+    <li>✓ Centre of mass, a laboratory reference frame.</li>
+  </ul>
 
-- ✓ Laws of motion; conservation of energy and momentum, applications to rotating frames, centripetal and Coriolis accelerations;
-- ✓ Motion under a central force; Conservation of angular momentum, Kepler's laws; Fields and potentials; Gravitational field and potential due to spherical bodies, Gauss and Poisson equations, gravitational self-energy; Two-body problem; Reduced mass; Rutherford scattering;
-- ✓ Centre of mass, a laboratory reference frame.
+  <h2>(b) Mechanics of Rigid Bodies</h2>
+  <ul>
+    <li>✓ System of particles; Centre of mass, angular momentum, equations of motion;</li>
+    <li>✓ Conservation theorems for energy, momentum, and angular momentum; Elastic and inelastic collisions;</li>
+    <li>✓ Rigid body; Degrees of freedom, Euler's theorem, angular velocity, angular momentum, moments of inertia, theorems of parallel and perpendicular axes, equation of motion for rotation; Molecular rotations (as rigid bodies); Di and tri-atomic molecules; Precessional motion; top, gyroscope.</li>
+  </ul>
 
-## (b) Mechanics of Rigid Bodies
+  <h2>(c) Mechanics of Continuous Media</h2>
+  <ul>
+    <li>✓ Elasticity, Hooke's law and elastic constants of isotropic solids and their inter-relation;</li>
+    <li>✓ Streamline (Laminar) flow, viscosity, Poiseuille's equation, Bernoulli's equation, Stokes' law and applications.</li>
+  </ul>
 
-- ✓ System of particles; Centre of mass, angular momentum, equations of motion;
-- ✓ Conservation theorems for energy, momentum, and angular momentum; Elastic and inelastic collisions;
-- ✓ Rigid body; Degrees of freedom, Euler's theorem, angular velocity, angular momentum, moments of inertia, theorems of parallel and perpendicular axes, equation of motion for rotation; Molecular rotations (as rigid bodies); Di and tri-atomic molecules; Precessional motion; top, gyroscope.
+  <h2>(d) Special Relativity</h2>
+  <ul>
+    <li>✓ Michelson-Morley experiment and its implications;</li>
+    <li>✓ Lorentz transformations – length contraction, time dilation, the addition of relativistic velocities, aberration, and Doppler effect, mass-energy relation, simple applications to a decay process;</li>
+    <li>✓ Four-dimensional momentum vector; Covariance of equations of physics.</li>
+  </ul>
 
-## (c) Mechanics of Continuous Media
-
-- ✓ Elasticity, Hooke's law and elastic constants of isotropic solids and their inter-relation;
-- ✓ Streamline (Laminar) flow, viscosity, Poiseuille's equation, Bernoulli's equation, Stokes' law and applications.
-
-## (d) Special Relativity
-
-- ✓ Michelson-Morley experiment and its implications;
-- ✓ Lorentz transformations – length contraction, time dilation, the addition of relativistic velocities, aberration, and Doppler effect, mass-energy relation, simple applications to a decay process;
-- ✓ Four-dimensional momentum vector; Covariance of equations of physics.
-`;
-
-    document.getElementById('content').innerHTML = marked.parse(markdown);
-  </script>
 </body>
 </html>
