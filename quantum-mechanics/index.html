@@ -1,1 +1,360 @@
-<html><head><title>quantum-mechanics</title></head><body><h1>quantum-mechanics Page Placeholder</h1></body></html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Notes</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Crimson Text', serif;
+            background: #f8f9fa;
+            padding: 1rem;
+            color: #2d3748;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .cover {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .subject {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+        
+        .title {
+            font-size: 1.2rem;
+            font-style: italic;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+        
+        .details {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            font-size: 1rem;
+        }
+        
+        .info-section {
+            padding: 1.5rem 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .info-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #4a5568;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .info-content {
+            line-height: 1.7;
+            color: #718096;
+        }
+        
+        .syllabus-section {
+            margin-bottom: 2rem;
+        }
+        
+        .syllabus-section h3 {
+            color: #4a5568;
+            margin: 1.5rem 0 0.8rem 0;
+            font-size: 1.1rem;
+            padding: 0.5rem;
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+        }
+        
+        .syllabus-section ul {
+            margin-left: 1rem;
+            margin-right: 0.5rem;
+        }
+        
+        .syllabus-section li {
+            margin-bottom: 0.8rem;
+            padding-left: 0.5rem;
+            position: relative;
+        }
+        
+        .syllabus-section li::before {
+            content: "";
+        }
+        
+        .pyq-link, .notes-link {
+            border: 1px solid #dc2626;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: #fef2f2;
+            display: block;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .pyq-link:hover, .notes-link:hover {
+            background: #fee2e2;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(220, 38, 38, 0.1);
+        }
+        
+        .pyq-link h4, .notes-link h4 {
+            color: #dc2626;
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        .notes-placeholder {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            background: #f8f9fa;
+            text-align: center;
+        }
+        
+        .notes-placeholder h4 {
+            color: #2d3748;
+            margin: 0;
+            font-size: 1rem;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            background: #f8f9fa;
+            font-size: 0.9rem;
+            color: #718096;
+        }
+        
+        /* Enhanced Mobile Styles */
+        @media (max-width: 768px) {
+            body {
+                padding: 0.5rem;
+            }
+            
+            .container {
+                border-radius: 4px;
+            }
+            
+            .cover {
+                padding: 2rem 1rem;
+            }
+            
+            .subject {
+                font-size: 2rem;
+                letter-spacing: 0.5px;
+            }
+            
+            .title {
+                font-size: 1.1rem;
+            }
+            
+            .info-section {
+                padding: 1rem 0.8rem;
+            }
+            
+            .info-title {
+                font-size: 1.2rem;
+            }
+            
+            .syllabus-section h3 {
+                font-size: 1rem;
+                padding: 0.4rem;
+            }
+            
+            .syllabus-section ul {
+                margin-left: 0.5rem;
+            }
+            
+            .syllabus-section li {
+                font-size: 0.95rem;
+                padding-left: 0.3rem;
+            }
+            
+            .pyq-link, .notes-link {
+                padding: 0.8rem;
+            }
+            
+            .pyq-link h4, .notes-link h4 {
+                font-size: 0.95rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 0.3rem;
+            }
+            
+            .cover {
+                padding: 1.5rem 0.8rem;
+            }
+            
+            .subject {
+                font-size: 1.8rem;
+            }
+            
+            .title {
+                font-size: 1rem;
+            }
+            
+            .info-section {
+                padding: 0.8rem 0.6rem;
+            }
+            
+            .info-title {
+                font-size: 1.1rem;
+            }
+            
+            .syllabus-section h3 {
+                font-size: 0.95rem;
+                padding: 0.3rem;
+            }
+            
+            .syllabus-section li {
+                font-size: 0.9rem;
+            }
+            
+            .pyq-link, .notes-link {
+                padding: 0.6rem;
+            }
+            
+            .pyq-link h4, .notes-link h4 {
+                font-size: 0.9rem;
+            }
+            
+            .footer {
+                padding: 1rem 0.5rem;
+                font-size: 0.8rem;
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+                max-width: none;
+            }
+        }
+        
+        /* Accessibility improvements */
+        @media (prefers-reduced-motion: reduce) {
+            .pyq-link, .notes-link {
+                transition: none;
+            }
+            
+            .pyq-link:hover, .notes-link:hover {
+                transform: none;
+            }
+        }
+        
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .cover {
+                background: #000;
+                color: #fff;
+            }
+            
+            .pyq-link, .notes-link {
+                border-width: 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Cover Page -->
+        <div class="cover">
+            <h1 class="subject">Mechanics</h1>
+            <p class="title">Comprehensive Study Notes and PYQ Solutions</p>
+        </div>
+        
+<div class="syllabus-section">
+    <h3>Quantum Mechanics</h3>
+    <ul>
+        <li>Wave-particle duality; Schrödinger equation and expectation values;</li>
+        <li>Uncertainty principle; Solutions of the one-dimensional Schrödinger equation for a free particle (Gaussian wave-packet), particle in a box, particle in a finite well, linear harmonic oscillator;</li>
+        <li>Reflection and transmission by a step potential and by a rectangular barrier;</li>
+        <li>Particle in a three-dimensional box, density of states, free electron theory of metals;</li>
+        <li>Angular momentum; Hydrogen atom; Spin half particles, properties of Pauli spin matrices.</li>
+    </ul>
+</div>
+
+        
+        <!-- PYQ Solutions Section -->
+        <div class="info-section">
+            <h2 class="info-title">Previous Year Questions (PYQ) Solutions</h2>
+            <div class="info-content">
+                <a href="/quantum-mechanics/pyqs/QM_01-10.pdf" target="_blank" class="pyq-link">
+                    <h4>🎯 UPSC CSE Physics Optional Quantum Mechanics PYQ Solution Part 1</h4>
+                </a>
+                <a href="/quantum-mechanics/pyqs/QM_11-20.pdf" target="_blank" class="pyq-link">
+                    <h4>🎯 UPSC CSE Physics Optional Quantum Mechanics PYQ Solution Part 2</h4>
+                </a>                
+                <a href="/quantum-mechanics/pyqs/QM_21-30.pdf" target="_blank" class="pyq-link">
+                    <h4>🎯 UPSC CSE Physics Optional Quantum Mechanics PYQ Solution Part 3</h4>
+                </a>                
+                <a href="/quantum-mechanics/pyqs/QM_31-40.pdf" target="_blank" class="pyq-link">
+                    <h4>🎯 UPSC CSE Physics Optional Quantum Mechanics PYQ Solution Part 4</h4>
+                </a>      
+                <a href="/quantum-mechanics/pyqs/QM_41-50.pdf" target="_blank" class="pyq-link">
+                    <h4>🎯 UPSC CSE Physics Optional Quantum Mechanics PYQ Solution Part 5</h4>
+                </a>                              
+            </div>
+        </div>
+
+        <!-- Notes Files Section -->
+        <div class="info-section">
+            <h2 class="info-title">Study Notes Files</h2>
+            <div class="info-content">
+                <div class="notes-placeholder">
+                    <a href="/quantum-mechanics/notes/Quantum-Mechanics-01.pdf" target="_blank" class="pyq-link">
+                        <h4>📄 UPSC CSE Physics Optional Quantum Mechanics Notes Part 1</h4>
+                     </a>  
+                    <a href="/quantum-mechanics/notes/Quantum-Mechanics-02.pdf" target="_blank" class="pyq-link">
+                        <h4>📄 UPSC CSE Physics Optional Quantum Mechanics Notes Part 2</h4>
+                     </a>  
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Physics Study Notes • Prepared with dedication • Academic Excellence</p>
+        </div>
+    </div>
+</body>
+</html>
