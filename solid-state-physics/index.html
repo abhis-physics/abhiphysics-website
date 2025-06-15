@@ -1,1 +1,43 @@
-<html><head><title>solid-state-physics</title></head><body><h1>solid-state-physics Page Placeholder</h1></body></html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coming Soon</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(to right, #fdfbfb, #ebedee);
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen text-gray-800 font-sans">
+  <div class="text-center px-6 max-w-2xl mx-auto animate-fade-in">
+    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">Coming Soon</h1>
+    <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+      More content will be added soon. <br>Till then you can visit our Telegram channel here:<br>
+      <a href="https://t.me/physicsupsc_official" target="_blank" class="text-blue-600 underline hover:text-blue-800 transition">
+        https://t.me/physicsupsc_official
+      </a>
+    </p>
+  </div>
+
+  <!-- Custom animation via Tailwind plugin or inline style -->
+  <style>
+    .animate-fade-in {
+      animation: fadeIn 1.2s ease-out forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+    }
+  </style>
+</body>
+</html>
