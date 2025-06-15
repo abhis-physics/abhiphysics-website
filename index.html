@@ -726,21 +726,54 @@
                 max-width: 250px;
             }
         }
+
     </style>
+
+    <!-- Your other head content -->
+    <link rel="stylesheet" href="assets/css/header.css">
 </head>
+
 <body>
-    <!-- Floating particles -->
-    <div class="floating-particles">
-        <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
-        <div class="particle" style="left: 20%; animation-delay: 1s;"></div>
-        <div class="particle" style="left: 30%; animation-delay: 2s;"></div>
-        <div class="particle" style="left: 40%; animation-delay: 3s;"></div>
-        <div class="particle" style="left: 50%; animation-delay: 4s;"></div>
-        <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
-        <div class="particle" style="left: 70%; animation-delay: 2s;"></div>
-        <div class="particle" style="left: 80%; animation-delay: 1s;"></div>
-        <div class="particle" style="left: 90%; animation-delay: 3s;"></div>
-    </div>
+
+
+    <header class="header">
+        <nav class="nav-container">
+            <!-- Logo -->
+            <a href="https://www.abhiphysics.com" class="logo">
+                <div class="logo-icon">⚛️</div>
+                <div class="logo-text">
+                    <span class="logo-main">Abhi Physics</span>
+                    <span class="logo-sub">UPSC Optional</span>
+                </div>
+            </a>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="https://www.abhiphysics.com" class="nav-link home-btn">
+                        <span class="nav-icon">🏠</span>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.abhiphysics.com/booklist.pdf" class="nav-link" target="_blank">
+                        <span class="nav-icon">📚</span>
+                        <span>Booklist</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Mobile Toggle -->
+            <button class="mobile-toggle" id="mobileToggle">
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Your page content here -->
+    <!-- Remember to add top padding/margin to account for fixed header -->
 
 
     <!-- Main Content -->
@@ -763,7 +796,7 @@
                         🎯 <a href="assets/pdfs/hint-book-paper-1-upsc-physics-optional-abhi-physics.pdf" target="_blank">Hint Book</a>
                     </span>
                     <span class="badge" role="listitem">
-                        📖 <a href="pyq-decode-2025-upsc-physics-optional.html" target="_blank">PYQ Decode Prpgram 2025</a> 
+                        📖 <a href="pyq-decode-2025-upsc-physics-optional.html" target="_blank">PYQ Decode Program 2025</a> 
                     </span>                    
                     <span class="badge" role="listitem">
                         🔬 <a href="ffc-2026-upsc-physics-optional.html" target="_blank">Full Fledged Video Course - 2026</a> 
@@ -897,6 +930,38 @@
         </div>
     </footer>
     </main>
+
+    
+    <!-- JavaScript for mobile toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileToggle = document.querySelector('.header .mobile-toggle');
+            const navMenu = document.querySelector('.header .nav-menu');
+            
+            if (mobileToggle && navMenu) {
+                mobileToggle.addEventListener('click', function() {
+                    mobileToggle.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+
+                const navLinks = document.querySelectorAll('.header .nav-link');
+                navLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        mobileToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    });
+                });
+
+                document.addEventListener('click', function(event) {
+                    const isClickInsideHeader = event.target.closest('.header');
+                    if (!isClickInsideHeader) {
+                        mobileToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>
