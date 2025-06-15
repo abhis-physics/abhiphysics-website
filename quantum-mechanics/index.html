@@ -294,7 +294,44 @@
             }
         }
     </style>
+  <link rel="stylesheet" href="header.css">
+
 </head>
+    <header class="header">
+        <nav class="nav-container">
+            <!-- Logo -->
+            <a href="https://www.abhiphysics.com" class="logo">
+                <div class="logo-icon">⚛️</div>
+                <div class="logo-text">
+                    <span class="logo-main">Abhi Physics</span>
+                    <span class="logo-sub">UPSC Optional</span>
+                </div>
+            </a>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="https://www.abhiphysics.com" class="nav-link home-btn">
+                        <span class="nav-icon">🏠</span>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.abhiphysics.com/assets/pdfs/booklist.pdf" class="nav-link" target="_blank">
+                        <span class="nav-icon">📚</span>
+                        <span>Booklist</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Mobile Toggle -->
+            <button class="mobile-toggle" id="mobileToggle">
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+            </button>
+        </nav>
+    </header>
 <body>
     <div class="container">
         <!-- Cover Page -->
@@ -361,4 +398,34 @@
         </div>
     </div>
 </body>
+    <!-- JavaScript for mobile toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileToggle = document.querySelector('.header .mobile-toggle');
+            const navMenu = document.querySelector('.header .nav-menu');
+            
+            if (mobileToggle && navMenu) {
+                mobileToggle.addEventListener('click', function() {
+                    mobileToggle.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+
+                const navLinks = document.querySelectorAll('.header .nav-link');
+                navLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        mobileToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    });
+                });
+
+                document.addEventListener('click', function(event) {
+                    const isClickInsideHeader = event.target.closest('.header');
+                    if (!isClickInsideHeader) {
+                        mobileToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
 </html>
