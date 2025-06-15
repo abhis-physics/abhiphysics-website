@@ -1,99 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Mechanics - UPSC Physics Optional</title>
-  <meta name="description" content="Syllabus and notes for Mechanics - UPSC Physics Optional. Covers particles, rigid bodies, continuous media, and special relativity.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 2rem;
-      background-color: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    h1 {
-      color: #2c3e50;
-      font-size: 2rem;
-    }
-
-    section {
-      background: #fff;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      color: #1a2c3b;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.3rem;
-    }
-
-    ul {
-      padding-left: 1.5rem;
-    }
-
-    li {
-      margin-bottom: 0.5rem;
-    }
-
-    .notes-placeholder {
-      color: #888;
-      font-style: italic;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Notes</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Crimson Text', serif;
+            background: #f8f9fa;
+            padding: 2rem;
+            color: #2d3748;
+        }
+        
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .cover {
+            text-align: center;
+            padding: 4rem 3rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .subject {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            font-style: italic;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            font-size: 1.1rem;
+        }
+        
+        .info-section {
+            padding: 2rem 3rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .info-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #4a5568;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .info-content {
+            text-align: center;
+            line-height: 1.8;
+            color: #718096;
+        }
+        
+        .content-placeholder {
+            padding: 3rem;
+            text-align: center;
+            background: #f7fafc;
+            color: #718096;
+            font-style: italic;
+            border: 2px dashed #cbd5e0;
+            margin: 2rem;
+            border-radius: 8px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background: #f8f9fa;
+            font-size: 0.9rem;
+            color: #718096;
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+                max-width: none;
+            }
+            
+            .content-placeholder {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .subject {
+                font-size: 2.5rem;
+            }
+            
+            .details {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .cover {
+                padding: 3rem 2rem;
+            }
+            
+            .info-section {
+                padding: 1.5rem 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <!-- Cover Page -->
+        <div class="cover">
+            <h1 class="subject">Mechanics</h1>
+            <p class="title">Comprehensive Study Notes and PYQ Solutions</p>
+            </div>
+        </div>
+        
+        <!-- Syllabus -->
+        <div class="info-section">
+            <h2 class="info-title">Syllabus</h2>
+            <div class="info-content" style="text-align: left; padding: 0 2rem;">
+                <h3 style="color: #4a5568; margin: 1.5rem 0 1rem 0; font-size: 1.1rem;">(a) Mechanics of Particles</h3>
+                <ul style="margin-left: 1.5rem; line-height: 1.6;">
+                    <li style="margin-bottom: 0.8rem;">✓ Laws of motion; conservation of energy and momentum, applications to rotating frames, centripetal and Coriolis accelerations;</li>
+                    <li style="margin-bottom: 0.8rem;">✓ Motion under a central force; Conservation of angular momentum, Kepler's laws; Fields and potentials; Gravitational field and potential due to spherical bodies, Gauss and Poisson equations, gravitational self-energy; Two-body problem; Reduced mass; Rutherford scattering;</li>
+                    <li style="margin-bottom: 0.8rem;">✓ Centre of mass, a laboratory reference frame.</li>
+                </ul>
+                
+                <h3 style="color: #4a5568; margin: 1.5rem 0 1rem 0; font-size: 1.1rem;">(b) Mechanics of Rigid Bodies</h3>
+                <ul style="margin-left: 1.5rem; line-height: 1.6;">
+                    <li style="margin-bottom: 0.8rem;">✓ System of particles; Centre of mass, angular momentum, equations of motion;</li>
+                    <li style="margin-bottom: 0.8rem;">✓ Conservation theorems for energy, momentum, and angular momentum; Elastic and inelastic collisions;</li>
+                    <li style="margin-bottom: 0.8rem;">✓ Rigid body; Degrees of freedom, Euler's theorem, angular velocity, angular momentum, moments of inertia, theorems of parallel and perpendicular axes, equation of motion for rotation; Molecular rotations (as rigid bodies); Di and tri-atomic molecules; Precessional motion; top, gyroscope.</li>
+                </ul>
+                
+                <h3 style="color: #4a5568; margin: 1.5rem 0 1rem 0; font-size: 1.1rem;">(c) Mechanics of Continuous Media</h3>
+                <ul style="margin-left: 1.5rem; line-height: 1.6;">
+                    <li style="margin-bottom: 0.8rem;">✓ Elasticity, Hooke's law and elastic constants of isotropic solids and their inter-relation;</li>
+                    <li style="margin-bottom: 0.8rem;">✓ Streamline (Laminar) flow, viscosity, Poiseuille's equation, Bernoulli's equation, Stokes' law and applications.</li>
+                </ul>
+                
+                <h3 style="color: #4a5568; margin: 1.5rem 0 1rem 0; font-size: 1.1rem;">(d) Special Relativity</h3>
+                <ul style="margin-left: 1.5rem; line-height: 1.6;">
+                    <li style="margin-bottom: 0.8rem;">✓ Michelson-Morley experiment and its implications;</li>
+                    <li style="margin-bottom: 0.8rem;">✓ Lorentz transformations – length contraction, time dilation, the addition of relativistic velocities, aberration, and Doppler effect, mass-energy relation, simple applications to a decay process;</li>
+                    <li style="margin-bottom: 0.8rem;">✓ Four-dimensional momentum vector; Covariance of equations of physics.</li>
+                </ul>
+            </div>
+        </div>
+    
+        
+        <!-- PYQ Solutions Section -->
+        <div class="info-section">
+            <h2 class="info-title">Previous Year Questions (PYQ) Solutions</h2>
+            <div class="info-content" style="text-align: left; padding: 0 2rem;">
+                
+                <div style="border: 1px solid #dc2626; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; background: #fef2f2;">
+                    <h4 style="color: #dc2626; margin-bottom: 0.5rem; font-size: 1.1rem;">🎯 <a href="/mechanics/pyqs/Mechanics_01-10.pdf" target="_blank"> UPSC CSE Physics Optional PYQ Solution Part 1</a></h4>
+                </div>
+                
+                <div style="border: 1px solid #dc2626; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; background: #fef2f2;">
+                    <h4 style="color: #dc2626; margin-bottom: 0.5rem; font-size: 1.1rem;">🎯 <a href="/mechanics/pyqs/Mechanics_11-20.pdf" target="_blank"> UPSC CSE Physics Optional PYQ Solution Part 2</a></h4>
+                </div>
+                
+                <div style="border: 1px solid #dc2626; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; background: #fef2f2;">
+                    <h4 style="color: #dc2626; margin-bottom: 0.5rem; font-size: 1.1rem;">🎯 <a href="/mechanics/pyqs/Mechanics_21-30.pdf" target="_blank"> UPSC CSE Physics Optional PYQ Solution Part 3</a></h4>
+                </div>
 
-  <header>
-    <h1>Mechanics – UPSC Physics Optional</h1>
-  </header>
+                <div style="border: 1px solid #dc2626; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; background: #fef2f2;">
+                    <h4 style="color: #dc2626; margin-bottom: 0.5rem; font-size: 1.1rem;">🎯 <a href="/mechanics/pyqs/Mechanics_31-40.pdf" target="_blank"> UPSC CSE Physics Optional PYQ Solution Part 4</a></h4>
+                </div>                
+            </div>
+        </div>
 
-  <section id="syllabus">
-    <h2>Syllabus</h2>
-
-    <h3>(a) Mechanics of Particles</h3>
-    <ul>
-      <li>✓ Laws of motion; conservation of energy and momentum, applications to rotating frames, centripetal and Coriolis accelerations;</li>
-      <li>✓ Motion under a central force; Conservation of angular momentum, Kepler's laws; Fields and potentials; Gravitational field and potential due to spherical bodies, Gauss and Poisson equations, gravitational self-energy; Two-body problem; Reduced mass; Rutherford scattering;</li>
-      <li>✓ Centre of mass, a laboratory reference frame.</li>
-    </ul>
-
-    <h3>(b) Mechanics of Rigid Bodies</h3>
-    <ul>
-      <li>✓ System of particles; Centre of mass, angular momentum, equations of motion;</li>
-      <li>✓ Conservation theorems for energy, momentum, and angular momentum; Elastic and inelastic collisions;</li>
-      <li>✓ Rigid body; Degrees of freedom, Euler's theorem, angular velocity, angular momentum, moments of inertia, theorems of parallel and perpendicular axes, equation of motion for rotation; Molecular rotations (as rigid bodies); Di and tri-atomic molecules; Precessional motion; top, gyroscope.</li>
-    </ul>
-
-    <h3>(c) Mechanics of Continuous Media</h3>
-    <ul>
-      <li>✓ Elasticity, Hooke's law and elastic constants of isotropic solids and their inter-relation;</li>
-      <li>✓ Streamline (Laminar) flow, viscosity, Poiseuille's equation, Bernoulli's equation, Stokes' law and applications.</li>
-    </ul>
-
-    <h3>(d) Special Relativity</h3>
-    <ul>
-      <li>✓ Michelson-Morley experiment and its implications;</li>
-      <li>✓ Lorentz transformations – length contraction, time dilation, the addition of relativistic velocities, aberration, and Doppler effect, mass-energy relation, simple applications to a decay process;</li>
-      <li>✓ Four-dimensional momentum vector; Covariance of equations of physics.</li>
-    </ul>
-  </section>
-
-  <section id="notes">
-    <h2>Notes</h2>
-    <p class="notes-placeholder">Notes for Mechanics will be added here soon.</p>
-  </section>
-
+        <!-- Notes Files Section -->
+        <div class="info-section">
+            <h2 class="info-title">Study Notes Files</h2>
+            <div class="info-content" style="text-align: left; padding: 0 2rem;">
+                
+                <div style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; background: #f8f9fa;">
+                    <h4 style="color: #2d3748; margin-bottom: 0.5rem; font-size: 1.1rem;">📄 To be uploaded soon</h4>
+                </div>
+            
+                
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Physics Study Notes • Prepared with dedication • Academic Excellence</p>
+        </div>
+    </div>
 </body>
 </html>
