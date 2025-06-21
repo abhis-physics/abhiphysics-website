@@ -726,7 +726,17 @@
                 max-width: 250px;
             }
         }
+        /* Custom Logo of Abhi Physics */
+        .logo-icon {
+            background: transparent !important; /* Remove any background color */
+        }
 
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 4px;
+        }
     </style>
 
     <!-- Your other head content -->
@@ -740,7 +750,9 @@
         <nav class="nav-container">
             <!-- Logo -->
             <a href="https://www.abhiphysics.com" class="logo">
-                <div class="logo-icon">⚛️</div>
+                <div class="logo-icon">
+                    <img src="/logo.png" alt="Abhi Physics Logo" />
+                </div>
                 <div class="logo-text">
                     <span class="logo-main">Abhi Physics</span>
                     <span class="logo-sub">UPSC Optional</span>
